@@ -11,7 +11,7 @@ export TOPDIR LC_ALL LANG TZ
 empty:=
 space:= $(empty) $(empty)
 $(if $(findstring $(space),$(TOPDIR)),$(error ERROR: The path to the OpenWrt directory must not include any spaces))
-HOSTCFLAGS += -fcommon
+
 world:
 
 DISTRO_PKG_CONFIG:=$(shell which -a pkg-config | grep -E '\/usr' | head -n 1)
